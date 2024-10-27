@@ -25,8 +25,8 @@ teardown() {
 @test "install from directory" {
   set -eu -o pipefail
   cd ${TESTDIR}
-  echo "# ddev get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get ${DIR}
+  echo "# ddev add-on get ${DIR} with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev add-on get ${DIR}
   ddev restart
   health_checks
 }
@@ -34,8 +34,8 @@ teardown() {
 @test "install from release" {
   set -eu -o pipefail
   cd ${TESTDIR} || ( printf "unable to cd to ${TESTDIR}\n" && exit 1 )
-  echo "# ddev get torhoehn/ddev-typesense with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
-  ddev get torhoehn/ddev-typesense
+  echo "# ddev add-on get torhoehn/ddev-typesense with project ${PROJNAME} in ${TESTDIR} ($(pwd))" >&3
+  ddev add-on get torhoehn/ddev-typesense
   ddev restart >/dev/null
   health_checks
 }
