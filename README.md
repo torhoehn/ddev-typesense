@@ -4,7 +4,9 @@
 
 Uses [typesense official image](https://hub.docker.com/r/typesense/typesense/)
 
-`ddev get torhoehn/ddev-typesense`
+`ddev add-on get torhoehn/ddev-typesense`
+
+For DDEV versions prior to v1.23.5, use `ddev get torhoehn/ddev-typesense`.
 
 ## Configuration
 
